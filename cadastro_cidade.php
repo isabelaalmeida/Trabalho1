@@ -9,16 +9,16 @@
 		$estado = $_POST["estado"];
 		$cidade = $_POST["cidade"];
 
-		if(file_exists('xml/cidades.xml')){
+		if(file_exists('cidades.xml')){
 
-			$xml  = simplexml_load_file('xml/cidades.xml');
+			$xml  = simplexml_load_file('cidades.xml');
 
 			$cid = $xml->addChild('cidades');
 
 			$cid->addChild('nome_cidade', $cidade);
 			$cid->addChild('estado', $estado);
 
-			file_put_contents('xml/cidades.xml', $xml->asXML());
+			file_put_contents('cidades.xml', $xml->asXML());
 
 		}else{
 			$xml = 
@@ -31,7 +31,7 @@
  	</cidade>
  </cidades>
 ";
-		file_put_contents('xml/cidades.xml', $xml);
+		file_put_contents('cidades.xml', $xml);
 		}
 	?>
 	<div>
