@@ -1,0 +1,28 @@
+a{
+	color:white;
+	 
+}
+body{
+	background-color:#4fd8e8;
+	 background: linear-gradient(to right, blue, pink, LightCoral,violet);
+		
+}
+h1{
+	
+	text-align:center;
+	 font-size:50px;
+	 
+}
+ a:hover {
+    background-color: #111;
+	
+}
+nav {
+	text-align:center;
+}
+table{
+	width:900px;
+	height:80px;
+	border-radius:25px;
+}
+
