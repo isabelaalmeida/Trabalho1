@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cadastros>
+ 	<cadastro>
+ 		<nome>Nataly</nome>
+ 		<email>nat@gmail.com</email>
+		<sexo>F</sexo>
+		<cid_est>Araraquara/SP</cid_est>
+ 	</cadastro>
+ <cadastro><nome>Isabela A.</nome><email>isa@hotmail.com</email><sexo>F</sexo><cid_est>Manaus/AM</cid_est></cadastro></cadastros>

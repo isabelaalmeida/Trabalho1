@@ -1,22 +1,29 @@
 <!-- Nataly -->
+
+<?php
+		include("cab.inc");
+	?>
+	
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Cidade Cadastrada</title>
+		<link rel="stylesheet" type="text/css" href="estilo.css"/>
 	</head>
 	<body>
 	<?php
-		$estado = $_POST["estado"];
+		$estado = $_POST["sigla"];
 		$cidade = $_POST["cidade"];
 
 		if(file_exists('cidades.xml')){
 
 			$xml  = simplexml_load_file('cidades.xml');
 
-			$cid = $xml->addChild('cidades');
+			$cid = $xml->addChild('cidade');
+
 
 			$cid->addChild('nome_cidade', $cidade);
-			$cid->addChild('estado', $estado);
+			$cid->addChild('sigla', $estado);
 
 			file_put_contents('cidades.xml', $xml->asXML());
 
@@ -27,7 +34,7 @@
  <cidades>
  	<cidade>
  		<nome_cidade>$cidade</nome_cidade>
- 		<estado>$estado</estado>
+ 		<sigla>$estado</sigla>
  	</cidade>
  </cidades>
 ";
